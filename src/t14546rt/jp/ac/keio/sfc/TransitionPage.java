@@ -9,10 +9,10 @@ public class TransitionPage extends JFrame{
 	TransitionPage(){
 		super();
 	}
-	void NextPage(JPanel panel){
-		JPanel next = panel;
-		add(next, BorderLayout.CENTER);
+	void nextPage(JPanel panel, int x,int y,int w,int h){
+		add(panel, BorderLayout.CENTER);
 		pack();
+		setBounds(x,y,w,h);
 		setVisible(true);
 	}
 }

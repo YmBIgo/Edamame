@@ -99,7 +99,8 @@ public class MainEditor extends JFrame implements ActionListener {
 			}
 		}else if(command.equals("Window")){
 			System.out.println("open!");
-			openFrame2();
+			SubEditor frame2 = new SubEditor(10,10,500,500);
+			frame2.open();
 		}else{
 			
 		}
@@ -130,15 +131,9 @@ public class MainEditor extends JFrame implements ActionListener {
 		}
 	}
 	
-	public static void openFrame2(){
-		String[] arr = {"Class", "Interface"};
-		SubEditor frame2 = new SubEditor(arr);
-		frame2.setBounds(10, 10, 500, 500);
-		frame2.setVisible(true);
-	}
 	public void open(){
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setBounds(10, 10, 750, 800);
-		this.setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setBounds(10, 10, 750, 800);
+		setVisible(true);
 	}
 }
