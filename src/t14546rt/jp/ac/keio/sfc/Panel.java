@@ -6,14 +6,17 @@ import java.awt.GridBagLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 public class Panel extends JFrame {
+	protected JTextArea text;
 	protected JPanel panel;
 	protected String[] mstr = {"public","protected","private","static","final","abstract","native","synchronized","transient","volatile","strictfp","const"};
 	protected GridBagLayout layout;
 	protected GridBagConstraints config;
 	protected int posx,posy,width,height;
-	Panel(int x,int y,int w,int h){
+	Panel(int x,int y,int w,int h, JTextArea t){
+		text = t;
 		panel = new JPanel();
 		layout = new GridBagLayout();
 		config = new GridBagConstraints();

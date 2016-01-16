@@ -55,6 +55,10 @@ public class SubEditor extends TransitionPage implements ActionListener {
 			cp.open();
 			break;
 		case "インターフェース":
+			remove(topPage);
+			InterfacePanel ip = new InterfacePanel(10,10,500,500, text);
+			setVisible(false);
+			ip.open();
 			break;
 		case "制御構文":
 			remove(topPage);
