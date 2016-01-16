@@ -99,7 +99,7 @@ public class MainEditor extends JFrame implements ActionListener {
 			}
 		}else if(command.equals("Window")){
 			System.out.println("open!");
-			SubEditor frame2 = new SubEditor(10,10,500,500);
+			SubEditor frame2 = new SubEditor(10,10,500,500, text_field);
 			frame2.open();
 		}else{
 			

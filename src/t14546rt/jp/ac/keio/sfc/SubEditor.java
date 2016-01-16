@@ -11,18 +11,20 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 public class SubEditor extends TransitionPage implements ActionListener {
+	private JTextArea text;
 	private JPanel topPage;
 	private JPanel controlPage;
-	private String[] topPageStrings = {"クラス", "インターフェース", "制御構文"};
+	private String[] topPageStrings = {"クラス", "インターフェース","変数", "制御構文"};
 	private String[] controlPageStrings = {"for", "if", "while","戻る"};
 	
 	int posx,posy,width,height;
-	SubEditor(int x,int y,int w,int h){
+	SubEditor(int x,int y,int w,int h, JTextArea t){
+		text = t;
 		topPage = makeMenuPanel(topPageStrings);
 		controlPage = makeMenuPanel(controlPageStrings);
-		add(topPage, BorderLayout.CENTER);
 		posx = x;posy = y;width = w;height = h;
 	}
 	private JPanel makeMenuPanel(String[] arr){
@@ -47,6 +49,10 @@ public class SubEditor extends TransitionPage implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		switch(e.getActionCommand()){
 		case "クラス":
+			remove(topPage);
+			ClassPanel cp = new ClassPanel(10,10,500,500, text);
+			setVisible(false);
+			cp.open();
 			break;
 		case "インターフェース":
 			break;
