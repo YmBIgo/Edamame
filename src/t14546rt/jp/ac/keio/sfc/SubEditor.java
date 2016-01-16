@@ -60,6 +60,12 @@ public class SubEditor extends TransitionPage implements ActionListener {
 			setVisible(false);
 			ip.open();
 			break;
+		case "変数":
+			remove(topPage);
+			VariablePanel vp = new VariablePanel(10,10,500,500,text);
+			setVisible(false);
+			vp.open();
+			break;
 		case "制御構文":
 			remove(topPage);
 			nextPage(controlPage,posx,posy,width,height);
