@@ -71,6 +71,10 @@ public class SubEditor extends TransitionPage implements ActionListener {
 			nextPage(controlPage,posx,posy,width,height);
 			break;
 		case "for":
+			remove(controlPage);
+			ForPanel fp = new ForPanel(10,10,500,500,text);
+			setVisible(false);
+			fp.open();
 			break;
 		case "if":
 			break;

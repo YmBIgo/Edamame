@@ -146,11 +146,8 @@ public class ClassPanel extends Panel implements ActionListener{
 			setVisible(true);
 			break;
 		case "submit":
-			if(name.getText().equals("")){
-				
-			}else{
+			if(!(name.getText().equals(""))){
 				setVisible(false);
-				System.out.println(getData());
 				InsertText it = new InsertText(getData(),text);
 				it.caret_insert();
 			}
