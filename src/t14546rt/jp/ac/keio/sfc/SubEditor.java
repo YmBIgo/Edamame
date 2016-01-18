@@ -77,6 +77,10 @@ public class SubEditor extends TransitionPage implements ActionListener {
 			fp.open();
 			break;
 		case "if":
+			remove(controlPage);
+			IfPanel ifp = new IfPanel(10,10,500,500,text);
+			setVisible(false);
+			ifp.open();
 			break;
 		case "while":
 			break;

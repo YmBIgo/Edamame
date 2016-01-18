@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 public class Panel extends JFrame {
-	protected JTextArea text;
+	protected JTextArea text; //MainEditorのテキストエリア
 	protected JPanel panel;
 	protected String[] mstr = {"public","protected","private","static","final","abstract","native","synchronized","transient","volatile","strictfp","const"};
 	protected GridBagLayout layout;

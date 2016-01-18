@@ -1,6 +1,11 @@
 package t14546rt.jp.ac.keio.sfc;
 
 public class GetIf extends GetControl{
+	GetIf(String value){
+		super();
+		syntaxString = "if(";
+		syntaxString += value;
+	}
 	GetIf(String value, boolean con){
 		super();
 		syntaxString = "if(";

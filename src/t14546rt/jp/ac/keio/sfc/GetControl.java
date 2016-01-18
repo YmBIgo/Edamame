@@ -1,6 +1,7 @@
 package t14546rt.jp.ac.keio.sfc;
 
 public class GetControl extends GetReservedWord{
+	protected final int switchnum = 6;
 	GetControl(){}
 	protected String switcher(String value1, String value2, int num){
 		String tmp = "";
