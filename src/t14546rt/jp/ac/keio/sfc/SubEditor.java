@@ -83,6 +83,10 @@ public class SubEditor extends TransitionPage implements ActionListener {
 			ifp.open();
 			break;
 		case "while":
+			remove(controlPage);
+			WhilePanel wp = new WhilePanel(10,10,500,500,text);
+			setVisible(false);
+			wp.open();
 			break;
 		case "戻る":
 			remove(controlPage);

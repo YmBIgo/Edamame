@@ -1,6 +1,11 @@
 package t14546rt.jp.ac.keio.sfc;
 
 public class GetWhile extends GetControl {
+	GetWhile(String value){
+		super();
+		syntaxString = "while(";
+		syntaxString += value;
+	}
 	GetWhile(String value, boolean con){
 		super();
 		syntaxString = "while(";
