@@ -66,11 +66,13 @@ public class MainEditor extends JFrame implements ActionListener {
 			filechooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
 			try{
 				int selected = filechooser.showSaveDialog(this);
-				File file = filechooser.getSelectedFile();
-				FileWriter filewriter = new FileWriter(file);
-				System.out.println(save_data);
-				filewriter.write(save_data);
-				filewriter.close();
+				if(selected == JFileChooser.APPROVE_OPTION){
+					File file = filechooser.getSelectedFile();
+					FileWriter filewriter = new FileWriter(file);
+					System.out.println(save_data);
+					filewriter.write(save_data);
+					filewriter.close();
+				}
 			}catch(IOException e){
 				JOptionPane.showMessageDialog(this, e);
 			}
